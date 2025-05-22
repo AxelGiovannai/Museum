@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { SearchParams } from '../types/SearchParams';
 import type { Department } from '../types/ApiResponse';
+import searchIcon from '../assets/search-icon.svg';
 
 interface SearchFiltersFormProps {
   departments: Department[];
@@ -157,20 +158,7 @@ const SearchFiltersForm = ({ departments, onSearch }: SearchFiltersFormProps) =>
       </div>
 
       <button type="submit" className="advancedform-search-button">
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="20" 
-          height="20" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
-        >
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
+        <img src={searchIcon} alt="Search" style={{ width: 20, height: 20 }} />
         Search
       </button>
     </form>

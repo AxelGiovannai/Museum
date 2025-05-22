@@ -57,6 +57,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-height: 160px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
 }
 
 .card-title {
@@ -277,6 +280,21 @@ th {
   outline: none;
   border-color: var(--dark-accent-primary);
   box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+}
+
+.search-input-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: opacity 0.2s, filter 0.2s;
+}
+
+.search-input-icon:hover {
+  opacity: 1;
+  filter: brightness(1.5);
 }
 
 .advancedform-search-button {
@@ -511,4 +529,38 @@ th {
   grid-column: 1 / -1;
   margin-top: 4rem;
   justify-self: unset;
+}
+
+.section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  color: var(--dark-text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .search-container {
+    min-width: 0;
+    width: 100%;
+  }
+  .search-form {
+    width: 100%;
+  }
 } 

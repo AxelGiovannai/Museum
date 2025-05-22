@@ -41,8 +41,8 @@ const HomePage = () => {
   if (error) return <ErrorMessage error={error} />;
 
   return (
-    <div className="bg-primary">
-      <h1 className="text-primary">Featured Highlights</h1>
+    <div className="section-container">
+      <h1 className="section-title">Featured Highlights</h1>
       <div className="card-grid">
         {highlights.map(object => (
           <ObjectCard key={object.objectID} object={object} />
