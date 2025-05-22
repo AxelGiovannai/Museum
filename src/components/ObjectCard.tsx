@@ -20,14 +20,12 @@ const ObjectCard = ({ object }: ObjectCardProps) => {
           {object.artistDisplayName && (
             <p className="card-description">{object.artistDisplayName}</p>
           )}
-          <div className="card-footer">
-            {object.objectDate && (
-              <span className="text-secondary">{object.objectDate}</span>
-            )}
-            {object.medium && (
-              <span className="text-tertiary">{object.medium}</span>
-            )}
-          </div>
+          {object.objectDate && (
+            <div className="text-secondary" style={{ marginTop: '0.5rem' }}>{object.objectDate}</div>
+          )}
+          {object.medium && (
+            <div className="text-tertiary" style={{ marginTop: '0.25rem' }}>{object.medium}</div>
+          )}
         </div>
       </Link>
     </div>
